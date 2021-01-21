@@ -1,0 +1,73 @@
+type Query {
+    loginuser(query: String): [User!]!
+    stockcontent: [StockDetail!]!
+}
+
+type Mutation{
+    createLogIn(data: CreateLogIn!):User!
+    updateLogIn(data: UpdateLogIn!): User!
+    deleteLogIn(name: String!):User!
+
+    createStock(data: CreateStock!):StockDetail!
+    
+}
+type Subscription{
+    loginuser: LogInSubscriptionPayLoad!
+    stockcontent: StockContentSubscriptionPayLoad!
+}
+input CreateLogIn {
+    name: String!
+    email: String!
+    password: String!
+    total_money: String
+    
+}
+
+input UpdateLogIn {
+    name: String!
+    email: String!
+    password: String!
+    total_money: String
+}
+
+input CreateStock{
+    Name: String
+    stockName: String!
+    stockNumber: String!
+    stockPrice: String!
+    BuyorSell: String!
+    fullDate: String
+    
+}
+
+type User {
+    name: String!
+    email: String!
+    password: String!
+    total_money: String
+}
+
+type StockDetail {
+    Name: String
+    stockName: String!
+    stockNumber: String!
+    stockPrice: Float!
+    BuyorSell: String!
+    fullDate: String
+}
+
+enum MutationType{
+    CREATED
+    UPDATED
+    DELETED
+}
+
+type LogInSubscriptionPayLoad{
+    mutation: MutationType!
+    data: User!
+}
+
+type StockContentSubscriptionPayLoad{
+    mutation: MutationType!
+    data: StockDetail!
+}

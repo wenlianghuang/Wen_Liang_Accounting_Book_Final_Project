@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "browserify": "^17.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "dotenv-defaults": "^2.0.1",
+    "express": "^4.17.1",
+    "graphql-yoga": "^1.18.3",
+    "mongoose": "^5.11.12",
+    "node": "^15.4.0",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "require": "^2.4.20",
+    "subscriptions-transport-ws": "^0.9.18"
+  },
+  "proxy": "http://localhost:8000"
+}

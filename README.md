@@ -40,5 +40,6 @@
     * `yarn install main folder` 
     * `yarn install server folder`  
     * `yarn start`
+*****
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 

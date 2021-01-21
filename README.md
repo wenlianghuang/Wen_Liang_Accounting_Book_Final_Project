@@ -35,10 +35,10 @@
 *****
 5.沒有很好的deploy，本來想要推到heroku，但graphql apollo一直沒辦法處理這個問題，簡單來說，在local時可以設定localhost，但在一般的網頁上apollo httpLink和WebsockeLink就一直找不到server對應的port，造成失敗
 *****
-*以下是我的解決方案
-    *`git clone` this repo
-    *`yarn install main folder` 
-    *`yarn install server folder`  
-    *`yarn start`
+* 以下是我的解決方案
+    * `git clone` this repo
+    * `yarn install main folder` 
+    * `yarn install server folder`  
+    * `yarn start`
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 

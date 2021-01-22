@@ -18,7 +18,7 @@ import { getMainDefinition } from 'apollo-utilities';
     uri: 'http://localhost:5000'
 })*/
 const httpLink = new HttpLink({
-    uri: 'http://https://main.d1owpwyfg2hovt.amplifyapp.com/'
+    uri: 'https://main.d1owpwyfg2hovt.amplifyapp.com/'
 })
 
 
@@ -29,7 +29,7 @@ const httpLink = new HttpLink({
 })*/
 
 const wsLink = new WebSocketLink({
-    uri: 'wss://main.d1owpwyfg2hovt.amplifyapp.com/',
+    uri: `wss://main.d1owpwyfg2hovt.amplifyapp.com/graphql`,
   options: {reconnect: true}
 })
 

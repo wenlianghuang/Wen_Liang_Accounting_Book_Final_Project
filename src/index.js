@@ -15,7 +15,7 @@ import { getMainDefinition } from 'apollo-utilities';
 
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:5000'
+  uri: ''
 })
 
 
@@ -24,7 +24,7 @@ const httpLink = new HttpLink({
 });*/
 
 const wsLink = new WebSocketLink({
-  uri: 'ws://localhost:5000',
+  uri: '',
   options: {reconnect: true}
 })
 

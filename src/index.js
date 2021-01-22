@@ -29,7 +29,7 @@ const httpLink = new HttpLink({
 })*/
 
 const wsLink = new WebSocketLink({
-    uri: `wss://main.d1owpwyfg2hovt.amplifyapp.com/graphql`,
+    uri: `ws://main.d1owpwyfg2hovt.amplifyapp.com/graphql`,
   options: {reconnect: true}
 })
 

@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "myaccountingbook698a8529": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

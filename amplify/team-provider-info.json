@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyf309ef650cf24-staging-63237-authRole",
+      "UnauthRoleArn": "arn:aws:iam::167998222282:role/amplify-amplifyf309ef650cf24-staging-63237-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::167998222282:role/amplify-amplifyf309ef650cf24-staging-63237-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyf309ef650cf24-staging-63237-deployment",
+      "UnauthRoleName": "amplify-amplifyf309ef650cf24-staging-63237-unauthRole",
+      "StackName": "amplify-amplifyf309ef650cf24-staging-63237",
+      "StackId": "arn:aws:cloudformation:us-east-2:167998222282:stack/amplify-amplifyf309ef650cf24-staging-63237/9f65bdf0-5c7b-11eb-b489-0a8e117037fe",
+      "AmplifyAppId": "d1ervkq8zvah34"
+    },
+    "categories": {
+      "auth": {
+        "myaccountingbook698a8529": {}
+      }
+    }
+  }
+}

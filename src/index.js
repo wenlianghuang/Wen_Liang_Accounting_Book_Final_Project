@@ -13,8 +13,6 @@ import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 
 
-import Amplify from 'aws-amplify';
-import config from './aws-exports';
 
 const httpLink = new HttpLink({
   uri: 'http://localhost:5000'
@@ -86,4 +84,3 @@ ReactDOM.render(
 reportWebVitals();
 
 
-Amplify.configure(config);

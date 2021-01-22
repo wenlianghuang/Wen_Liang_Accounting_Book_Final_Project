@@ -29,7 +29,7 @@ const httpLink = new HttpLink({
 })*/
 
 const wsLink = new WebSocketLink({
-    uri: `wss://wenliang-accounting-book.herokuapp.com/graphql`,
+    uri: `wss://wenliang-accounting-book.herokuapp.com`,
   options: {reconnect: true}
 })
 

@@ -14,17 +14,22 @@ import { getMainDefinition } from 'apollo-utilities';
 
 
 
-const httpLink = new HttpLink({
+/*const httpLink = new HttpLink({
     uri: 'http://localhost:5000'
+})*/
+const httpLink = new HttpLink({
+    uri: 'http://https://main.d1owpwyfg2hovt.amplifyapp.com/'
 })
 
 
-/*const httpLink = new HttpLink({
-    uri: ''
-});*/
+
+/*const wsLink = new WebSocketLink({
+    uri: 'ws://localhost:5000',
+  options: {reconnect: true}
+})*/
 
 const wsLink = new WebSocketLink({
-    uri: 'ws://localhost:5000',
+    uri: 'wss://main.d1owpwyfg2hovt.amplifyapp.com/',
   options: {reconnect: true}
 })
 

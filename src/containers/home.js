@@ -136,11 +136,14 @@ function Home(){
             <Switch>
                 <Route exact path="/stock_platform" component={Stock_Platform}/>
                 <Route path="/stock_platform/Deal" component={Deal}/>
+                
                 <Route path="/stock_platform/Expenses/Food" component={Food}/>
                 <Route path="/stock_platform/Expenses/Clothing" component={Clothing}/>
                 <Route path="/stock_platform/Expenses/Accommodation" component={Accommodation}/>
                 <Route path="/stock_platform/Expenses/Transport" component={Transport}/>
                 <Route path="/stock_platform/Expenses/Others" component={Others}/>
+                
+
             </Switch>
             </div>
             

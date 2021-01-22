@@ -12,6 +12,7 @@ export default function ChangeEmail(){
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
+    const [total_money,setTotalMoney] = useState(0);
     const [correct,setCorrect] = useState(false);
     const [correctmsg,setCorrectMSG] = useState('');
     const [id,setID] = useState('');
@@ -49,6 +50,7 @@ export default function ChangeEmail(){
                 name: name,
                 email: email,
                 password: password,
+                total_money: total_money,
             }
         });
         

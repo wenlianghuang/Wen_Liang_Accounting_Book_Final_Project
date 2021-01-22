@@ -18,7 +18,7 @@ import { getMainDefinition } from 'apollo-utilities';
     uri: 'http://localhost:5000'
 })*/
 const httpLink = new HttpLink({
-    uri: 'https://wenliang-accounting-book.herokuapp.com/'
+    uri: 'https://wenliang-accounting-book.herokuapp.com'
 })
 
 
@@ -29,7 +29,7 @@ const httpLink = new HttpLink({
 })*/
 
 const wsLink = new WebSocketLink({
-    uri: `wss://wenliang-accounting-book.herokuapp.com`,
+    uri: `wss://wenliang-accounting-book.herokuapp.com/graphql`,
   options: {reconnect: true}
 })
 

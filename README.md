@@ -43,5 +43,5 @@
 *****
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 *****
-已經成功deploy: https://wenliang-accounting-book.herokuapp.com/login
+已經成功deploy: https://wenliang-accounting-book.herokuapp.com
 

@@ -23,11 +23,10 @@ export default function ChangeEmail(){
             document: LOGIN_SUBSCRIPTION,
             updateQuery: (prev,{subscriptionData})=>{
                 if(!subscriptionData) return prev
-                newDelete = subscriptionData.data.loginuser.data
-                //console.log(`delete name: ${newLogIn.name} and email: ${newLogIn.email}`)
+                const newDelete = subscriptionData.data.loginuser.data
                 for(let i = 0; i < prev.data.length;i++){
                     if(prev.loginuser.name === newDelete.name && prev.loginuser.password === newDelete.password && prev.loginuser.email === newDelete.email){
-                        prev = pre.splice(i,1);
+                        prev = prev.splice(i,1);
                         break;
                     }else{
                         continue;

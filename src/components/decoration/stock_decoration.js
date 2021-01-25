@@ -93,6 +93,18 @@ const DealSellButton = withStyles({
   }
 })(Button)
 
+const ShowYourList = withStyles({
+  root:{
+    height:"3cm",
+    width: "30%",
+    position: "relative",
+    '&:hover':{
+      backgroundColor: '#3f51b5',
+      color:"#ffb3d9",
+    }
+  }
+})(Button)
+
 /*const DealResult = withStyles({
   root:{
     width= '100%'
@@ -109,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
 
       },
-      height: "70vh",
+      height: "100vh",
       backgroundColor: "#ffffcc",
     },
     marginInFirstTwoItem: {
@@ -148,4 +160,4 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export {useStyles,NameandNumberTextField,PriceTextField,DealBuyButton,DealSellButton};
+export {useStyles,NameandNumberTextField,PriceTextField,DealBuyButton,DealSellButton,ShowYourList};

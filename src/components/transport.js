@@ -29,53 +29,12 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 
 import Button from '@material-ui/core/Button';
-const columns = [
-    { 
-        id: 'name', 
-        label: 'Name',
-        align: 'center', 
-        minWidth: 100 },
-    { 
-        id: 'running_item', 
-        label: 'Running Item', 
-        align: 'center',
-        minWidth: 250 },
-    {
-      id: 'running_type',
-      label: 'Running Type',
-      align: 'center',
-      minWidth: 150,
-      //format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-      id: 'price',
-      label: 'Price',
-      minWidth: 150,
-      align: 'right',
-      //format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-      id: 'Buy_or_Sell',
-      label: 'Buy or Sell',
-      minWidth: 200,
-      align: 'center',
-      //format: (value) => value.toFixed(2),
-    },
-    
-  ];
-  
-  
-  const useStyles = makeStyles({
-    root: {
-      width: '100%',
-    },
-    container: {
-      maxHeight: 440,
-    },
-  });
+
+import {columns,useDealStyles} from './dealtable_detail';  
+
 
 export default function Clothing(){
-    const classes = useStyles();
+    const classes = useDealStyles();
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(3);
 
@@ -165,6 +124,7 @@ export default function Clothing(){
             </div>
         </nav>
 
+        <div className={classes.pageStyle}>
         <Paper className={classes.root}>
                 <TableContainer className={classes.container}>
                   <Table stickyHeader aria-label="sticky table">
@@ -211,6 +171,7 @@ export default function Clothing(){
                   onChangeRowsPerPage={handleChangeRowsPerPage}
                 />
               </Paper>
+            </div>
         </>
     )
 }

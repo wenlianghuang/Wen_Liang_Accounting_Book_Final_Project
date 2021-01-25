@@ -33,9 +33,9 @@
 *****
 4.沒有平均每個月的收入支出
 *****
-5.沒有很好的deploy，本來想要推到heroku，但graphql apollo一直沒辦法處理這個問題，簡單來說，在local時可以設定localhost，但在一般的網頁上apollo httpLink和WebsockeLink就一直找不到server對應的port，造成失敗
+5.如果你想要實際在local執行而不是用網路的話，在local時可以設定localhost，並試圖執行
 *****
-* 以下是我的解決方案
+* 以下是我的執行方案
     * `git clone` this repo
     * `yarn install main folder` 
     * `yarn install server folder`  
@@ -43,5 +43,5 @@
 *****
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 *****
-已經成功deploy: https://wenliang-accounting-book.herokuapp.com
+已經成功deploy: https://wenliang-accounting-book.herokuapp.com，但還是可以用local的方式來執行試試看XDD
 

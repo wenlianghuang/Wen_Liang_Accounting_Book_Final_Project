@@ -32,66 +32,12 @@ import TableRow from '@material-ui/core/TableRow';
 
 import Button from '@material-ui/core/Button';
 
-import Grid from '@material-ui/core/Grid';
-import position from '@material-ui/system';
-const columns = [
-    { 
-        id: 'name', 
-        label: 'Name',
-        align: 'center', 
-        minWidth: 50 },
-    { 
-        id: 'stock_Name', 
-        label: 'Name', 
-        align: 'center',
-        minWidth: 150 },
-    {
-      id: 'stock_Number',
-      label: 'Type',
-      align: 'center',
-      minWidth: 70,
-      //format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-      id: 'stock_Price',
-      label: 'Price',
-      minWidth: 100,
-      align: 'center',
-      //format: (value) => value.toLocaleString('en-US'),
-    },
-    {
-      id: 'Buy_or_Sell',
-      label: 'Buy or Sell',
-      minWidth: 70,
-      align: 'center',
-      //format: (value) => value.toFixed(2),
-    },
-    {
-      id: 'implement_date',
-      label: 'Date',
-      minwidth: 200,
-      align: 'center',
-    }
-    
-  ];
-  
-  
-  const useStyles = makeStyles({
-    root: {
-      width: '100%',
-    },
-    container: {
-      maxHeight: 440,
-    },
-    paperbutton:{
-      width: '30%',
-      display: 'flex',
-    }
-  });
+import {ShowYourList} from './decoration/stock_decoration';
+import {columns,useDealStyles} from './dealtable_detail';
 
 
 export default function Deal(){
-    const classes = useStyles();
+    const classes = useDealStyles();
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(3);
 
@@ -172,7 +118,7 @@ export default function Deal(){
     }
     test();
     const handleDetail = (e) => {
-        //e.preventDefault();
+        e.preventDefault();
         setDealName(useContextName); 
         setDealStockName(tmpdealstockname);
         setDealStockNumber(tmpdealstocknumber);
@@ -240,13 +186,14 @@ export default function Deal(){
                 </ul>
             </div>
         </nav>
-        <div>
+        <div className={classes.pageStyle}>
             
             {deal ? (
                 <>
                 
                 <h3 className="">Bank Account Balance: {Final_Balance}</h3>
                 
+
                 <Paper className={classes.root} bg >
                 <TableContainer className={classes.container}>
                   <Table stickyHeader aria-label="sticky table">
@@ -294,20 +241,20 @@ export default function Deal(){
                 />
               </Paper>
               
+              <Button style={{top:"50px"}} variant="contained" color="primary" onClick={handleFood}>Food</Button>
+              <Button style={{top:"50px",left:"1vw"}} variant="contained" color="primary" onClick={handleClothing}>Clothing</Button>
+              <Button style={{top:"50px",left:"2vw"}} variant="contained" color="primary" onClick={handleAccommodation}>Accommodation</Button>
+              <Button style={{top:"50px",left:"3vw"}} variant="contained" color="primary" onClick={handleTransport}>Transport</Button>
+              <Button style={{top:"50px",left:"4vw"}} variant="contained" color="primary" onClick={handleOthers}>Others</Button>
               
-                
-              
-              
-              <Button className="pull-right" variant="contained" color="primary" onClick={handleFood}>Food</Button>
-              
-              <Button variant="contained" color="primary" onClick={handleClothing}>Clothing</Button>
-              <Button variant="contained" color="primary" onClick={handleAccommodation}>Accommodation</Button>
-              <Button variant="contained" color="primary" onClick={handleTransport}>Transport</Button>
-              <Button variant="contained" color="primary" onClick={handleOthers}>Others</Button>
               
               </>
             ):(
-                <button onClick={handleDetail}>請看收入支出明細</button>       
+                
+                <Button onClick={handleDetail} style={{top:"100px"}} variant="outlined" color="primary" backgroundColor="transparent" >請看收入支出明細</Button>
+                
+                
+                       
             )}
 
         </div>

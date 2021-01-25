@@ -99,7 +99,13 @@ export default function Stock_Platform() {
         
     })
     let tmpdate = selectedDate.toString();
+    var detailDate = new Date();
+    detailDate = detailDate.getFullYear() + "-" + `0${detailDate.getMonth()+1}` + "-" + detailDate.getDate();
+    console.log(detailDate);
     
+    //var date = new Date();
+    //let defaultDate = date.yyyymmdd();
+    //console.log('default: ',defaultDate);
     /*
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -142,7 +148,7 @@ export default function Stock_Platform() {
     yourMonth = createContext(selectedDate.getMonth());
     yourYear = createContext(selectedDate.getFullYear());*/
     
-    fullDate = createContext(tmpdate);
+    
     return(
         <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -203,7 +209,7 @@ export default function Stock_Platform() {
                     id="date"
                     label="Accounting Book"
                     type="date"
-                    defaultValue="2021-01-20"
+                    defaultValue={detailDate}
                     className={classes.textField}
                     InputLabelProps={{
                     shrink: true,

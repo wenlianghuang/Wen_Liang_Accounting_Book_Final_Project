@@ -251,10 +251,10 @@ export default function Deal(){
               </>
             ):(
                 
-                <Button onClick={handleDetail} style={{top:"100px"}} variant="outlined" color="primary" backgroundColor="transparent" >請看收入支出明細</Button>
+                <Button onClick={handleDetail} style={{top:"100px",width:"200px"}} variant="outlined" color="primary" backgroundColor="transparent" >請看收入支出明細</Button>
                 
                 
-                       
+                      
             )}
 
         </div>

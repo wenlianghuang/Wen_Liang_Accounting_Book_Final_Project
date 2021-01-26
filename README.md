@@ -43,7 +43,7 @@
 *****
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 *****
-已經成功deploy: https://wenliang-accounting-book.herokuapp.com，
+已經成功deploy: https://wenliang-accounting-book.herokuapp.com
 *****
 但還是可以用local的方式來執行試試看XDD
 

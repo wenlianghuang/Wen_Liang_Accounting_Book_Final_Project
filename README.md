@@ -37,9 +37,9 @@
 *****
 * 以下是我的執行方案
     * `git clone` this repo
-    * `yarn install main folder` 
-    * `yarn install server folder`  
-    * `yarn start`
+    * `npm run install main folder` 
+    * `npm run install server folder`  
+    * `npm start`
 *****
 不是很好的方法，但我一直無法上傳到heroku的最大原因...
 *****

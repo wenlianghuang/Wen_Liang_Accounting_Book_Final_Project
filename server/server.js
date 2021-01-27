@@ -4,7 +4,7 @@ let cors = require('cors');
 let bodyParser = require('body-parser');
 let database = require('./database/db');
 */
-//import dotenv_default from 'dotenv-defaults';
+import dotenv_default from 'dotenv-defaults';
 
 //import express from 'express';
 import mongoose from 'mongoose';
@@ -21,7 +21,7 @@ import Mutation from './resolvers/Mutation.js';
 import Subscription from './resolvers/Subscription.js';
 import db from './database/db.js'
 import cors from 'cors';
-//dotenv_default.config({path: "../.env"});//The path in the root folder and find the ".env" file.It seems that the version of nvm 12 is can't work, only version v14 can woark
+dotenv_default.config({path: "../.env"});//The path in the root folder and find the ".env" file.It seems that the version of nvm 12 is can't work, only version v14 can woark
 
                                          
 
@@ -50,7 +50,7 @@ const dbOptions = {
     useUnifiedTopology: true
 };
 
-mongoose.connect(localURL,dbOptions)
+mongoose.connect(process.env.MONGO_URL,dbOptions)
     .then(res => {
         console.log('mongo db connection created')
     })

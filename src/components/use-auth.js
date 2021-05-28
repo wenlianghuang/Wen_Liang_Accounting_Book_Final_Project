@@ -168,7 +168,8 @@ export function To_Deal() {
   return (
     <Button 
       variant="contained" 
-      onClick={handleHistory}
+      onClick={handleHistory
+      }
       color="primary"
       
       >

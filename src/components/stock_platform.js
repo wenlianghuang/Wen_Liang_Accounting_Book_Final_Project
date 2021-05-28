@@ -129,7 +129,7 @@ export default function Stock_Platform() {
                 stockNumber: stocknumber,
                 stockPrice: stockprice,
                 BuyorSell: buyorsell,
-                fullDate: selectedDate,
+                fullDate: detailDate,
 
             }
         })
